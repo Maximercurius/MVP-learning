@@ -18,6 +18,8 @@
 		0057CBFE280C8D6E007E9327 /* MVP_education_projectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057CBFD280C8D6E007E9327 /* MVP_education_projectUITestsLaunchTests.swift */; };
 		0057CC0B280C8DB4007E9327 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057CC0A280C8DB4007E9327 /* Person.swift */; };
 		0057CC0D280C8E05007E9327 /* Main Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057CC0C280C8E05007E9327 /* Main Presenter.swift */; };
+		0057CC13280C96E4007E9327 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0057CC12280C96E4007E9327 /* MainViewController.xib */; };
+		0057CC15280C97BB007E9327 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057CC14280C97BB007E9327 /* ModuleBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		0057CBFD280C8D6E007E9327 /* MVP_education_projectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVP_education_projectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0057CC0A280C8DB4007E9327 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		0057CC0C280C8E05007E9327 /* Main Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main Presenter.swift"; sourceTree = "<group>"; };
+		0057CC12280C96E4007E9327 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		0057CC14280C97BB007E9327 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 			children = (
 				0057CBDA280C8D5F007E9327 /* AppDelegate.swift */,
 				0057CBDC280C8D5F007E9327 /* SceneDelegate.swift */,
+				0057CC14280C97BB007E9327 /* ModuleBuilder.swift */,
 				0057CC0E280C9633007E9327 /* MainModule */,
 				0057CBE0280C8D5F007E9327 /* Main.storyboard */,
 				0057CBE3280C8D6C007E9327 /* Assets.xcassets */,
@@ -145,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				0057CBDE280C8D5F007E9327 /* MainViewController.swift */,
+				0057CC12280C96E4007E9327 /* MainViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,6 +278,7 @@
 				0057CBE7280C8D6C007E9327 /* LaunchScreen.storyboard in Resources */,
 				0057CBE4280C8D6C007E9327 /* Assets.xcassets in Resources */,
 				0057CBE2280C8D5F007E9327 /* Main.storyboard in Resources */,
+				0057CC13280C96E4007E9327 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +308,7 @@
 				0057CBDB280C8D5F007E9327 /* AppDelegate.swift in Sources */,
 				0057CC0B280C8DB4007E9327 /* Person.swift in Sources */,
 				0057CBDD280C8D5F007E9327 /* SceneDelegate.swift in Sources */,
+				0057CC15280C97BB007E9327 /* ModuleBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

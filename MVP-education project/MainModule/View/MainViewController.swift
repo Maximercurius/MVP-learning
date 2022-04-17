@@ -17,6 +17,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    //MARK: - IBOAction
+
     @IBAction func didTapButtonAction(_ sender: Any) {
         self.presenter.showGreeting()
     }
