@@ -20,6 +20,7 @@
 		0057CC0D280C8E05007E9327 /* Main Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057CC0C280C8E05007E9327 /* Main Presenter.swift */; };
 		0057CC13280C96E4007E9327 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0057CC12280C96E4007E9327 /* MainViewController.xib */; };
 		0057CC15280C97BB007E9327 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057CC14280C97BB007E9327 /* ModuleBuilder.swift */; };
+		0057CC17280C9C83007E9327 /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057CC16280C9C83007E9327 /* MainPresenterTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		0057CC0C280C8E05007E9327 /* Main Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main Presenter.swift"; sourceTree = "<group>"; };
 		0057CC12280C96E4007E9327 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		0057CC14280C97BB007E9327 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		0057CC16280C9C83007E9327 /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				0057CBF1280C8D6E007E9327 /* MVP_education_projectTests.swift */,
+				0057CC18280C9C87007E9327 /* MainPresenterTest */,
 			);
 			path = "MVP-education projectTests";
 			sourceTree = "<group>";
@@ -169,6 +172,14 @@
 				0057CC0C280C8E05007E9327 /* Main Presenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0057CC18280C9C87007E9327 /* MainPresenterTest */ = {
+			isa = PBXGroup;
+			children = (
+				0057CC16280C9C83007E9327 /* MainPresenterTest.swift */,
+			);
+			path = MainPresenterTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0057CBF2280C8D6E007E9327 /* MVP_education_projectTests.swift in Sources */,
+				0057CC17280C9C83007E9327 /* MainPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
