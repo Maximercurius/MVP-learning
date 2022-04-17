@@ -105,13 +105,11 @@
 			children = (
 				0057CBDA280C8D5F007E9327 /* AppDelegate.swift */,
 				0057CBDC280C8D5F007E9327 /* SceneDelegate.swift */,
-				0057CBDE280C8D5F007E9327 /* MainViewController.swift */,
-				0057CC0C280C8E05007E9327 /* Main Presenter.swift */,
+				0057CC0E280C9633007E9327 /* MainModule */,
 				0057CBE0280C8D5F007E9327 /* Main.storyboard */,
 				0057CBE3280C8D6C007E9327 /* Assets.xcassets */,
 				0057CBE5280C8D6C007E9327 /* LaunchScreen.storyboard */,
 				0057CBE8280C8D6C007E9327 /* Info.plist */,
-				0057CC0A280C8DB4007E9327 /* Person.swift */,
 			);
 			path = "MVP-education project";
 			sourceTree = "<group>";
@@ -131,6 +129,40 @@
 				0057CBFD280C8D6E007E9327 /* MVP_education_projectUITestsLaunchTests.swift */,
 			);
 			path = "MVP-education projectUITests";
+			sourceTree = "<group>";
+		};
+		0057CC0E280C9633007E9327 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				0057CC0F280C965F007E9327 /* View */,
+				0057CC11280C967F007E9327 /* Presenter */,
+				0057CC10280C9673007E9327 /* Model */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		0057CC0F280C965F007E9327 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0057CBDE280C8D5F007E9327 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0057CC10280C9673007E9327 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0057CC0A280C8DB4007E9327 /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0057CC11280C967F007E9327 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0057CC0C280C8E05007E9327 /* Main Presenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
