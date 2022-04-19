@@ -9,29 +9,98 @@ import XCTest
 
 @testable import MVP_education_project
 
+class MockView: MainViewProtocol {
+    func succes() {
+    }
+    
+    func failure(error: Error) {
+    }
+}
+
+class MockNetworkService: NetworkSrviceProtocol {
+    var comments: [Comment]!
+    init() {}
+    
+    convenience init(comments: [Comment]?) {
+        self.init()
+        self.comments = comments
+    }
+
+    func getComments(comletion: @escaping (Result<[Comment]?, Error>) -> Void) {
+        if let comments = comments {
+            comletion(.success(comments))
+        } else {
+            let error = NSError(domain: "", code: 0, userInfo: nil)
+            comletion(.failure(error))
+        }
+    }
+    
+    
+}
+
 class MainPresenterTest: XCTestCase {
+    
+    var view: MockView!
+    var presenter: MainPresenter!
+    var networkService: NetworkSrviceProtocol!
+    var router: RouterProtocol!
+    var comments = [Comment]()
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        let nav = UINavigationController()
+        let assembly = AssemblyModuleBuilder()
+        router = Router(navigationController: nav, assemblyBuilder: assembly)
+
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        view = nil
+        networkService = nil
+        presenter = nil
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testGetSuccesComments() {
+        let comment = Comment(postId: 1, id: 2, name: "Foo", email: "Bar", body: "Baz")
+        comments.append(comment)
+        
+        view = MockView()
+        networkService = MockNetworkService(comments: [comment])
+        presenter = MainPresenter(view: view, networkService: networkService, router: router)
+        
+        var catchComments: [Comment]?
+        
+        networkService.getComments { result in
+            switch result {
+            case.success(let comments):
+                catchComments = comments
+            case .failure(let error):
+                print(error)
+            }
         }
+        XCTAssertNotEqual(catchComments?.count, 0)
+        XCTAssertEqual(catchComments?.count, comments.count)
+        
+    }
+    
+    func testGetFailureComments() {
+        let comment = Comment(postId: 1, id: 2, name: "Foo", email: "Bar", body: "Baz")
+        comments.append(comment)
+        
+        view = MockView()
+        networkService = MockNetworkService()
+        presenter = MainPresenter(view: view, networkService: networkService, router: router)
+        
+        var catchError: Error?
+        
+        networkService.getComments { result in
+            switch result {
+            case.success(let comments):
+                print(comments!)
+            case .failure(let error):
+                catchError = error
+            }
+        }
+        XCTAssertNotNil(catchError)
+        
     }
 
 }

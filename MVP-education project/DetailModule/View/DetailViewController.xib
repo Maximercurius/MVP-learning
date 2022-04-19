@@ -25,13 +25,25 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hat-TK-60x">
+                    <rect key="frame" x="117" y="696" width="187" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="POP"/>
+                    <connections>
+                        <action selector="tapAction" destination="-1" eventType="touchUpInside" id="21q-Dc-dG2"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="C1U-Sm-Jd2" secondAttribute="bottom" constant="353" id="4F9-dI-WhN"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="C1U-Sm-Jd2" secondAttribute="trailing" constant="20" id="54t-P8-GRp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hat-TK-60x" secondAttribute="trailing" constant="110" id="Nsm-bJ-BkA"/>
                 <constraint firstItem="C1U-Sm-Jd2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Xg1-qm-bcW"/>
+                <constraint firstItem="hat-TK-60x" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="652" id="azQ-BQ-l2l"/>
+                <constraint firstItem="hat-TK-60x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="117" id="cyU-M4-pzb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hat-TK-60x" secondAttribute="bottom" constant="135" id="jJo-YK-Vzg"/>
                 <constraint firstItem="C1U-Sm-Jd2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="146" id="xzt-aY-X0F"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="86.383928571428569"/>

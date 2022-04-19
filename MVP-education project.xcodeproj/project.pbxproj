@@ -19,12 +19,14 @@
 		0057CC0B280C8DB4007E9327 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057CC0A280C8DB4007E9327 /* Comment.swift */; };
 		0057CC0D280C8E05007E9327 /* Main Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057CC0C280C8E05007E9327 /* Main Presenter.swift */; };
 		0057CC13280C96E4007E9327 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0057CC12280C96E4007E9327 /* MainViewController.xib */; };
-		0057CC15280C97BB007E9327 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057CC14280C97BB007E9327 /* ModuleBuilder.swift */; };
+		0057CC15280C97BB007E9327 /* AssemblyModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057CC14280C97BB007E9327 /* AssemblyModuleBuilder.swift */; };
 		0057CC17280C9C83007E9327 /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057CC16280C9C83007E9327 /* MainPresenterTest.swift */; };
 		0057CC1A280D24A1007E9327 /* NeworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057CC19280D24A1007E9327 /* NeworkService.swift */; };
 		0057CC1D280D2FD8007E9327 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057CC1C280D2FD8007E9327 /* DetailPresenter.swift */; };
 		0057CC22280D31ED007E9327 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057CC20280D31ED007E9327 /* DetailViewController.swift */; };
 		0057CC23280D31ED007E9327 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0057CC21280D31ED007E9327 /* DetailViewController.xib */; };
+		0057CC28280D54D1007E9327 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057CC27280D54D1007E9327 /* Router.swift */; };
+		0057CC2A280F09FC007E9327 /* RouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0057CC29280F09FC007E9327 /* RouterTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,12 +63,14 @@
 		0057CC0A280C8DB4007E9327 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		0057CC0C280C8E05007E9327 /* Main Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main Presenter.swift"; sourceTree = "<group>"; };
 		0057CC12280C96E4007E9327 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		0057CC14280C97BB007E9327 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		0057CC14280C97BB007E9327 /* AssemblyModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyModuleBuilder.swift; sourceTree = "<group>"; };
 		0057CC16280C9C83007E9327 /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
 		0057CC19280D24A1007E9327 /* NeworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeworkService.swift; sourceTree = "<group>"; };
 		0057CC1C280D2FD8007E9327 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		0057CC20280D31ED007E9327 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0057CC21280D31ED007E9327 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		0057CC27280D54D1007E9327 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		0057CC29280F09FC007E9327 /* RouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +123,8 @@
 			children = (
 				0057CBDA280C8D5F007E9327 /* AppDelegate.swift */,
 				0057CBDC280C8D5F007E9327 /* SceneDelegate.swift */,
-				0057CC14280C97BB007E9327 /* ModuleBuilder.swift */,
+				0057CC14280C97BB007E9327 /* AssemblyModuleBuilder.swift */,
+				0057CC27280D54D1007E9327 /* Router.swift */,
 				0057CC1F280D31B9007E9327 /* DetailModule */,
 				0057CC1B280D24B0007E9327 /* ServiceLayer */,
 				0057CC0E280C9633007E9327 /* MainModule */,
@@ -188,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				0057CC16280C9C83007E9327 /* MainPresenterTest.swift */,
+				0057CC29280F09FC007E9327 /* RouterTest.swift */,
 			);
 			path = MainPresenterTest;
 			sourceTree = "<group>";
@@ -361,13 +367,14 @@
 			files = (
 				0057CC22280D31ED007E9327 /* DetailViewController.swift in Sources */,
 				0057CC0D280C8E05007E9327 /* Main Presenter.swift in Sources */,
+				0057CC28280D54D1007E9327 /* Router.swift in Sources */,
 				0057CBDF280C8D5F007E9327 /* MainViewController.swift in Sources */,
 				0057CBDB280C8D5F007E9327 /* AppDelegate.swift in Sources */,
 				0057CC1D280D2FD8007E9327 /* DetailPresenter.swift in Sources */,
 				0057CC1A280D24A1007E9327 /* NeworkService.swift in Sources */,
 				0057CC0B280C8DB4007E9327 /* Comment.swift in Sources */,
 				0057CBDD280C8D5F007E9327 /* SceneDelegate.swift in Sources */,
-				0057CC15280C97BB007E9327 /* ModuleBuilder.swift in Sources */,
+				0057CC15280C97BB007E9327 /* AssemblyModuleBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0057CBF2280C8D6E007E9327 /* MVP_education_projectTests.swift in Sources */,
+				0057CC2A280F09FC007E9327 /* RouterTest.swift in Sources */,
 				0057CC17280C9C83007E9327 /* MainPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
